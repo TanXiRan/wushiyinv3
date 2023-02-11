@@ -34,6 +34,6 @@ urlpatterns = [
     path('register/', login_register_views.RegisterView.as_view()),
     path('logout/', login_register_views.logout),
 
-    path('pwd/change/',views.ChangePwdView.as_view()),
+    path('pwd/change/', views.ChangePwdView.as_view()),
     re_path(r'^leave/$', views.LeaveWsyView.as_view()),
 ]

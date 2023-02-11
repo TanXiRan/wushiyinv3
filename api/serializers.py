@@ -186,7 +186,7 @@ class ChapterSerializers(serializers.ModelSerializer):
     category = serializers.ReadOnlyField(source="category.name")
     en_category = serializers.ReadOnlyField(source="category.en_name")
     # character_set = serializers.StringRelatedField(many=True, read_only=True)
-    character_set= GameCharacterSerializers(many=True,read_only=True)
+    character_set = GameCharacterSerializers(many=True, read_only=True)
     path = serializers.SerializerMethodField()
 
     class Meta:
@@ -240,4 +240,3 @@ class AnimeSerializers(ChapterSerializers):
     class Meta:
         model = Anime
         fields = '__all__'
-

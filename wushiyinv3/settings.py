@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-#r=6bnt$(ne2=9!ic3_mnxp#c6m*m6edwdc=&a(-m3upjyjkbl
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
+# ALLOWED_HOSTS = []
+
 DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -42,11 +44,22 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
 ]
 
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     # 'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#     'md.encoding_middleware.LoadsJson',
+# ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -77,13 +90,24 @@ WSGI_APPLICATION = 'wushiyinv3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'wushiyinv3',
+#         'PORT': 3306,
+#         'PASSWORD': 'th123',
+#         'USER': 'root',
+#         'HOST': 'localhost',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wushiyinv3',
         'PORT': 3306,
-        'PASSWORD': '',
-        'USER': 'root',
+        'PASSWORD': 'th123!',
+        'USER': 'xiran',
         'HOST': 'localhost',
     }
 }
