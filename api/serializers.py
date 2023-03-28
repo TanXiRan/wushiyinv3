@@ -21,7 +21,7 @@ class MyTokenVerifySerializer(TokenVerifySerializer):
         settings.SECRET_KEY: setting.py默认的key 除非在配置文件中修改了
         algorithms: 加密的方法
         """
-        print(attrs['token'])
+        # print(attrs['token'])
         decoded_data = dict()
         try:
             decoded_data = jwt_decode(attrs['token'], settings.SECRET_KEY, algorithms=["HS256"])
@@ -97,11 +97,50 @@ class UserSerializers(serializers.ModelSerializer):
         learned_chapter = validated_data.get('learned_chapter', None)
         anime = validated_data.get('anime', None)
         print(anime)
+        print(instance)
 
-        instance.username = validated_data.get('username', instance.username)
-        instance.email = validated_data.get('email', instance.email)
+        new_username = validated_data.get('username', instance.username)
+        if User.objects.exclude(id=instance.id).filter(username=new_username).exists():
+            raise serializers.ValidationError(detail="昵称被占用！")
+
+        new_email = validated_data.get('email', instance.email)
+        if User.objects.exclude(id=instance.id).filter(email=new_email).exists():
+            raise serializers.ValidationError(detail="邮箱被占用！")
+
+        new_tel = validated_data.get('tel', instance.tel)
+        if new_tel and User.objects.exclude(id=instance.id).filter(tel=new_tel).exists():
+            raise serializers.ValidationError(detail="电话号被占用！")
+
+        instance.username = new_username
+        instance.email = new_email
+        instance.tel = new_tel
+        # instance.username = validated_data.get('username', instance.username)
+        # new_email = validated_data.get('email', instance.email)
+        #
+        # if new_email == instance.email:
+        #     return JsonResponse({
+        #         'msg': '注意：请输入新的邮箱！'
+        #     }, json_dumps_params={'ensure_ascii': False})
+        # user_qs = User.objects.filter(email=new_email).all()
+        # if user_qs:
+        #     return JsonResponse({
+        #         'msg': '注意：邮箱已经被别人使用！'
+        #     }, json_dumps_params={'ensure_ascii': False})
+        # instance.email = new_email
+        #
+        # new_tel = validated_data.get('tel', instance.tel)
+        # if new_tel == instance.tel:
+        #     return JsonResponse({
+        #         'msg': '注意：请输入新的手机号！'
+        #     }, json_dumps_params={'ensure_ascii': False})
+        # user_qs = User.objects.filter(tel=new_tel).all()
+        # if user_qs:
+        #     return JsonResponse({
+        #         'msg': '注意：手机号已经被别人使用！'
+        #     }, json_dumps_params={'ensure_ascii': False})
+        # instance.tel = new_tel
+
         instance.gender = validated_data.get('gender', instance.gender)
-        instance.tel = validated_data.get('tel', instance.tel)
         instance.max_score = validated_data.get('max_score', instance.max_score)
         instance.min_time = validated_data.get('min_time', instance.min_time)
         instance.avatar = validated_data.get('avatar', instance.avatar)

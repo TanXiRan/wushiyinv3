@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticatedOrReadOnly
 from .serializers import *
 from django.core.exceptions import ObjectDoesNotExist
 
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenViewBase
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
 from django.views import View
 
@@ -13,7 +13,7 @@ from django.views import View
 # from django.contrib import auth
 
 
-class MyTokenVerifyView(TokenViewBase):
+class MyTokenVerifyView(TokenVerifyView):
     """
     验证token得到用户信息 token: 验证的token
     """
@@ -171,11 +171,6 @@ class ChangePwdView(View):
                 res['msg'] = '内部错误，修改失败！'
 
         return JsonResponse(res, json_dumps_params={'ensure_ascii': False})
-
-
-class HuashuiView(View):
-    def post(self):
-        pass
 
 
 class LeaveWsyView(View):
