@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#r=6bnt$(ne2=9!ic3_mnxp#c6m*m6edwdc=&a(-m3upjyjkbl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = []
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
-# DEBUG = False
-# ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -71,8 +71,7 @@ ROOT_URLCONF = 'wushiyinv3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,27 +89,27 @@ WSGI_APPLICATION = 'wushiyinv3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wushiyinv3',
-        'PORT': 3306,
-        'PASSWORD': 'th123',
-        'USER': 'root',
-        'HOST': 'localhost',
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'wushiyinv3',
 #         'PORT': 3306,
-#         'PASSWORD': 'th123!',
-#         'USER': 'xiran',
+#         'PASSWORD': 'th123',
+#         'USER': 'root',
 #         'HOST': 'localhost',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wushiyinv3',
+        'PORT': 3306,
+        'PASSWORD': 'th123!',
+        'USER': 'xiran',
+        'HOST': 'localhost',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -144,9 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR, 'static'
-]
+STATICFILES_DIRS = [BASE_DIR, 'static']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
@@ -168,6 +165,4 @@ REST_FRAMEWORK = {
 }
 
 
-AUTHENTICATION_BACKENDS = (
-    'api.views.MyCustomBackend',
-)
+AUTHENTICATION_BACKENDS = ('api.views.MyCustomBackend',)

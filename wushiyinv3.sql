@@ -253,7 +253,7 @@ CREATE TABLE `api_user` (
 
 LOCK TABLES `api_user` WRITE;
 /*!40000 ALTER TABLE `api_user` DISABLE KEYS */;
-INSERT INTO `api_user` VALUES ('pbkdf2_sha256$390000$suz6IjZt3MqxaD2PFR4oqE$UQ8aho05ygu3zhTj0SE5V0242i+gzvptgp+IYAK2Yxg=','2022-12-15 02:00:23.151229',1,'xiran','','','123@aa.com',1,1,'2022-12-06 14:13:00.000000',1,'s','19822959569',19,'2022-12-06 14:13:38.901753',1,16,'normal'),('pbkdf2_sha256$390000$wxF52LNjk0CeyJNVq2bDJ8$JP4yuERgcanfzx9MWflO6UwW9I/2h2AjBmvCDFUWid0=','2022-12-06 14:19:00.000000',0,'小可爱','','','123@abc.com',0,1,'2022-12-06 14:19:00.000000',2,'f','123',13,'2022-12-06 14:19:21.138640',1,1,'normal'),('pbkdf2_sha256$390000$USUn3u5nhSfIiq2uqqe362$d6PwqyLzDrFZ2A+52UI/T8Yczz0E00SFbY4LZLeGOWo=',NULL,0,'xiaopang','','','123@aaa.com',0,1,'2022-12-17 08:23:00.000000',3,'s',NULL,15,'2022-12-17 08:23:11.862718',5,1,'normal'),('pbkdf2_sha256$390000$4VpBfloZO8hKmX1gnBhVr0$WPoVy2rXPY41IDv4bQicAVKyq9lMko7aQzDJir8KhCI=','2022-12-18 04:00:42.945194',0,'小明','','','123@hhh.com',0,1,'2022-12-18 04:00:42.813206',4,'s',NULL,0,'2022-12-18 04:00:42.923429',3,10000000,'normal'),('pbkdf2_sha256$390000$vNMupn9zYNZFUd4ZI3vEvY$BEui0w1DQhMm1W3TKKDw9xidE00Cs0EH/VOHyu8uGF0=','2022-12-18 04:02:25.687204',0,'花花','','','123@aa.com',0,1,'2022-12-18 04:02:25.575008',5,'s',NULL,0,'2022-12-18 04:02:25.676698',2,10000000,'leaved'),('pbkdf2_sha256$390000$dgmm50bnoEjsEe3AIkn6JP$iCFuk9pjm0iLU+WN11CP9AvSyJ735uZa0UKH7n630Pg=','2022-12-18 04:04:57.081522',0,'小花花','','','123@aaa.com',0,1,'2022-12-18 04:04:56.957482',6,'s',NULL,0,'2022-12-18 04:04:57.071076',4,10000000,'normal'),('pbkdf2_sha256$390000$zv3eaAVMuX9mt32yPVVETH$U/3EnBqcnvoQbwRbgAQ+t7/orB9F9P8W39MIQd/tu04=','2023-01-27 03:13:51.122172',0,'bala','','','333@qq.com',0,1,'2023-01-27 03:13:50.933501',7,'s',NULL,0,'2023-01-27 03:13:51.045229',2,10000000,'normal'),('pbkdf2_sha256$390000$cMVYTkjeAz9tgPOiKN5jba$LlAQ8fwz8B5jyo7GmoWobvTcD9YsMCvhdiGDNm6Cfy0=','2023-01-27 03:32:00.690101',0,'kk','','','333@aa.com',0,1,'2023-01-27 03:32:00.535703',8,'s',NULL,0,'2023-01-27 03:32:00.647476',4,10000000,'normal'),('pbkdf2_sha256$390000$Sw1aalb6k04LP6oKQ7Joly$C6U4WjpgW9G+Yfqj4EwZORrp81SLBKxbB7TDV66wjqY=','2023-01-27 03:33:01.661051',0,'hh','','','3334@aa.com',0,1,'2023-01-27 03:33:01.538512',9,'s',NULL,0,'2023-01-27 03:33:01.650817',1,10000000,'normal');
+INSERT INTO `api_user` VALUES ('pbkdf2_sha256$390000$suz6IjZt3MqxaD2PFR4oqE$UQ8aho05ygu3zhTj0SE5V0242i+gzvptgp+IYAK2Yxg=','2022-12-15 02:00:23.151229',1,'xiran','','','123@aa.com',1,1,'2022-12-06 14:13:00.000000',1,'s','19822959569',19,'2022-12-06 14:13:38.901753',1,16,'normal'),('pbkdf2_sha256$390000$wxF52LNjk0CeyJNVq2bDJ8$JP4yuERgcanfzx9MWflO6UwW9I/2h2AjBmvCDFUWid0=','2022-12-06 14:19:00.000000',0,'小可爱','','','123@abc.com',0,1,'2022-12-06 14:19:00.000000',2,'f','123',13,'2022-12-06 14:19:21.138640',1,1,'normal'),('pbkdf2_sha256$390000$USUn3u5nhSfIiq2uqqe362$d6PwqyLzDrFZ2A+52UI/T8Yczz0E00SFbY4LZLeGOWo=',NULL,0,'xiaopang','','','123@aaa.com',0,1,'2022-12-17 08:23:00.000000',3,'s',NULL,15,'2022-12-17 08:23:11.862718',5,1,'normal'),('pbkdf2_sha256$390000$4VpBfloZO8hKmX1gnBhVr0$WPoVy2rXPY41IDv4bQicAVKyq9lMko7aQzDJir8KhCI=','2022-12-18 04:00:42.945194',0,'小明','','','123@hhh.com',0,1,'2022-12-18 04:00:42.813206',4,'s',NULL,0,'2022-12-18 04:00:42.923429',3,10000000,'normal');
 /*!40000 ALTER TABLE `api_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -330,7 +330,7 @@ CREATE TABLE `api_user_learned_chapter` (
   KEY `api_user_learned_chapter_chapter_id_1dc8d2d8_fk_api_chapter_id` (`chapter_id`),
   CONSTRAINT `api_user_learned_chapter_chapter_id_1dc8d2d8_fk_api_chapter_id` FOREIGN KEY (`chapter_id`) REFERENCES `api_chapter` (`id`),
   CONSTRAINT `api_user_learned_chapter_user_id_3e63890e_fk_api_user_id` FOREIGN KEY (`user_id`) REFERENCES `api_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -339,7 +339,7 @@ CREATE TABLE `api_user_learned_chapter` (
 
 LOCK TABLES `api_user_learned_chapter` WRITE;
 /*!40000 ALTER TABLE `api_user_learned_chapter` DISABLE KEYS */;
-INSERT INTO `api_user_learned_chapter` VALUES (26,1,1),(27,1,2),(28,1,3),(85,1,4),(86,1,5),(87,1,6),(29,1,7),(88,1,8),(30,1,9),(31,1,10),(89,1,11),(90,1,12),(91,1,13),(92,1,14),(93,1,15),(94,1,16),(95,1,17),(96,1,18),(125,1,19),(65,2,1),(97,2,2),(98,3,1),(99,3,2),(100,3,3),(101,3,4),(102,3,5),(103,3,6),(104,3,7),(105,3,8),(106,3,9),(107,3,10),(108,3,11),(109,3,12),(110,3,13),(111,3,14),(112,3,15),(113,3,16),(114,3,17),(115,3,18),(116,3,19),(117,3,20),(118,3,21),(119,3,22),(120,3,23),(121,3,24),(122,3,25),(123,3,26),(124,3,27),(126,9,1),(127,9,2),(128,9,3);
+INSERT INTO `api_user_learned_chapter` VALUES (26,1,1),(27,1,2),(28,1,3),(85,1,4),(86,1,5),(87,1,6),(29,1,7),(88,1,8),(30,1,9),(31,1,10),(89,1,11),(90,1,12),(91,1,13),(92,1,14),(93,1,15),(94,1,16),(95,1,17),(96,1,18),(125,1,19),(129,1,20),(65,2,1),(97,2,2),(98,3,1),(99,3,2),(100,3,3),(101,3,4),(102,3,5),(103,3,6),(104,3,7),(105,3,8),(106,3,9),(107,3,10),(108,3,11),(109,3,12),(110,3,13),(111,3,14),(112,3,15),(113,3,16),(114,3,17),(115,3,18),(116,3,19),(117,3,20),(118,3,21),(119,3,22),(120,3,23),(121,3,24),(122,3,25),(123,3,26),(124,3,27);
 /*!40000 ALTER TABLE `api_user_learned_chapter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -602,4 +602,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-29 22:30:43
+-- Dump completed on 2023-04-06 16:42:44
